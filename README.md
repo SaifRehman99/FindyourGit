@@ -1,2 +1,2 @@
 # FindyourGit
->Find your github accounts details in just one search!
+>Find your github account details in just one search!
