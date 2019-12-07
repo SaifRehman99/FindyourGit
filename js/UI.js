@@ -66,10 +66,9 @@ class UI {
         <div class="card card-body mt-4">
         <div class="row">
         <div class="col-md-6">
-        ${data.name}
-        <h4></h4>
+        <h4 class="font-weight-bold">${data.name}</h4>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 d-flex justify-content-end">
         <button type="button" class="btn btn-primary">
         <i class="fas fa-star"></i> <span class="badge badge-light">${data.stargazers_count}</span>
       </button>
