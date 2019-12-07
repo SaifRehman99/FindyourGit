@@ -20,10 +20,14 @@ seachText.addEventListener('keyup', (e) => {
                 // checking for the null user
                 if (data.userData.message === "Not Found") {
                     // show alert here
-                    console.log('no')
+                    ui.alertUser()
                 } else {
-                    // show users
+                    console.log(data)
+                        // show users
                     ui.showUser(data.userData)
+
+                    // show repo
+                    ui.showRepo(data.userRepoInfo)
                 }
             })
 
@@ -31,7 +35,7 @@ seachText.addEventListener('keyup', (e) => {
     } else {
 
         // clearing the data here
-        console.log('clear')
+        ui.clearUser()
     }
 
 })

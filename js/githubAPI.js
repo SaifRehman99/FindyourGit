@@ -8,13 +8,20 @@ class Github {
     // getting the user here
     async getUser(user) {
 
+        // getting the user info here
         const userInfo = await fetch(`https://api.github.com/users/${user}?client_id=${this.Client_ID}&client_secret=${this.Client_Secret}`);
 
+        // gettig the user repo here
+        const userRepo = await fetch(`https://api.github.com/users/${user}/repos?per_page=6&sort=created: asc&client_id=${this.Client_ID}&client_secret=${this.Client_Secret}`);
+
+
         const userData = await userInfo.json();
+        const userRepoInfo = await userRepo.json();
 
         // returing the obj here
         return {
-            userData
+            userData,
+            userRepoInfo
         }
     }
 }
